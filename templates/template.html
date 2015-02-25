@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>My string: {{my_string}}</p>
+    <ul>
+        {% for n in my_list %}
+        <li>{{n}}</li>
+        {% endfor %}
+    </ul>
+    <p>Same list with a filter: {{ my_list|join(', ') }}</p>
+    <h4>Current date/time: {{ current_time | datetimefilter }}</h4>
+{% endblock %}
